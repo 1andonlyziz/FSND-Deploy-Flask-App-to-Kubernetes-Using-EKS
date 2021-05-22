@@ -1,9 +1,12 @@
 {
     "Version": "2012-10-17",
-    "Statement":[{
-        "Effect": "Allow",
-        "Action": ["eks:Describe*", "ssm:GetParameters"],
-        "Resource":"*"
-    }]
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::899676604268:root"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
    }
-   
