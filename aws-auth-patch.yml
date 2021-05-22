@@ -2,14 +2,19 @@ apiVersion: v1
 data:
   mapRoles: |
     - groups:
-      - system:masters
-      rolearn: arn:aws:iam::899676604268:role/UdacityFlaskDeployCBKubectlRole
-      username: build
+    - system:masters
+    rolearn: arn:aws:iam::899676604268:role/UdacityFlaskDeployCBKubectlRole
+    username: build  
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::899676604268:role/eksctl-simple-jwt-api-nodegroup-n-NodeInstanceRole-PV9YOJMH70PD
+      username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
     []
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2021-05-21T18:56:32Z"
+  creationTimestamp: "2021-05-22T07:18:00Z"
   managedFields:
   - apiVersion: v1
     fieldsType: FieldsV1
@@ -20,9 +25,9 @@ metadata:
         f:mapUsers: {}
     manager: eksctl.exe
     operation: Update
-    time: "2021-05-21T18:56:32Z"
+    time: "2021-05-22T07:18:00Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "1559"
+  resourceVersion: "1575"
   selfLink: /api/v1/namespaces/kube-system/configmaps/aws-auth
-  uid: abb7ef53-6636-46fe-8ad7-efbe8afd981a
+  uid: 10f76120-b86e-4c97-a2a4-ef72d4aa4c05
