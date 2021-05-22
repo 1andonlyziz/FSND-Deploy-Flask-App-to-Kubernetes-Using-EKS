@@ -3,6 +3,7 @@ AWSTemplateFormatVersion: 2010-09-09
 
 Description: EKSWSV1
 
+
 Parameters:
 
   EksClusterName:
@@ -39,7 +40,7 @@ Parameters:
 
   GitHubUser:
     Type: String
-    Default: 1andonlyziz
+    Default: SudKul
     Description: GitHub username or organization
     MinLength: 3
     MaxLength: 100
